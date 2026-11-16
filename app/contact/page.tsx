@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import LocationFooter from '@/components/LocationFooter';
-import { MapPin, Phone, Clock, Mail, Building, Car, Bus, Train } from 'lucide-react';
+import { MapPin, Clock, Mail, Car, Bus } from 'lucide-react';
 
 export const metadata = {
   title: 'Contact Us | Sector 32D Chandigarh Office | Atlas Crown',
-  description: 'Visit Atlas Crown Immigration at 2nd Floor, SCO 361, Sector 32D, Chandigarh. Open Mon-Sat 10 AM - 6 PM. Call +91 98765 43210.',
-  keywords: ['contact atlas crown immigration', 'sector 32d chandigarh immigration office', 'immigration office phone number chandigarh'],
+  description: 'Visit Atlas Crown Immigration at 2nd Floor, SCO 361, Sector 32D, Chandigarh. Open Mon-Sat 10 AM - 6 PM.',
+  keywords: ['contact atlas crown immigration', 'sector 32d chandigarh immigration office', 'immigration office chandigarh'],
 };
 
 export default function ContactPage() {

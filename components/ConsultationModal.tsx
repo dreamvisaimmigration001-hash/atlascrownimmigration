@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, CheckCircle2, Calendar, Clock, User, Phone, Mail, Globe } from 'lucide-react';
+import { X, CheckCircle2, Calendar, Clock, User, Mail, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface ConsultationModalProps {
@@ -14,7 +14,6 @@ export default function ConsultationModal({ isOpen, onClose, defaultService = 'S
   const [step, setStep] = useState<'form' | 'success'>('form');
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
     email: '',
     service: defaultService,
     destination: 'Canada',
@@ -75,34 +74,18 @@ export default function ConsultationModal({ isOpen, onClose, defaultService = 'S
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1">Phone Number</label>
-                    <div className="relative">
-                      <Phone className="absolute left-3.5 top-3 w-4 h-4 text-slate-400" />
-                      <input
-                        required
-                        type="tel"
-                        placeholder="+91 98765 43210"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-900 text-slate-800 text-sm"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1">Email Address</label>
-                    <div className="relative">
-                      <Mail className="absolute left-3.5 top-3 w-4 h-4 text-slate-400" />
-                      <input
-                        required
-                        type="email"
-                        placeholder="you@example.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-900 text-slate-800 text-sm"
-                      />
-                    </div>
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1">Email Address</label>
+                  <div className="relative">
+                    <Mail className="absolute left-3.5 top-3 w-4 h-4 text-slate-400" />
+                    <input
+                      required
+                      type="email"
+                      placeholder="you@example.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-900 text-slate-800 text-sm"
+                    />
                   </div>
                 </div>
 
@@ -173,7 +156,7 @@ export default function ConsultationModal({ isOpen, onClose, defaultService = 'S
                 </div>
                 <h4 className="text-2xl font-bold text-slate-900">Consultation Booked!</h4>
                 <p className="text-slate-600 text-sm max-w-xs mx-auto">
-                  Thank you, <span className="font-semibold text-slate-900">{formData.name}</span>. Our Chandigarh immigration expert will call you shortly at <span className="font-semibold text-slate-900">{formData.phone}</span>.
+                  Thank you, <span className="font-semibold text-slate-900">{formData.name}</span>. Our Chandigarh immigration expert will reach out to you shortly at <span className="font-semibold text-slate-900">{formData.email}</span>.
                 </p>
                 <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-left text-xs text-slate-600 space-y-1">
                   <p><span className="font-semibold text-slate-800">Service:</span> {formData.service}</p>

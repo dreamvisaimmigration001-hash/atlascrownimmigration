@@ -34,7 +34,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               'image': 'https://atlascrownimmigration.in/atlascrownimmigration.jpeg',
               '@id': 'https://atlascrownimmigration.in',
               'url': 'https://atlascrownimmigration.in',
-              'telephone': '+91-9876543210',
               'address': {
                 '@type': 'PostalAddress',
                 'streetAddress': '2nd Floor, SCO 361, Sector 32D, Sector 32',

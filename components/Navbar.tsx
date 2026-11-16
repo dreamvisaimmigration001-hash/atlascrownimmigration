@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Crown, PhoneCall, Clock, MapPin, Menu, X } from 'lucide-react';
+import { Crown, Clock, MapPin, Menu, X } from 'lucide-react';
 import ConsultationModal from './ConsultationModal';
 
 export default function Navbar() {
@@ -36,10 +36,7 @@ export default function Navbar() {
               </span>
             </div>
             <div className="flex items-center gap-3">
-              <a href="tel:+919876543210" className="flex items-center gap-1 text-white hover:text-amber-300 transition-colors font-semibold">
-                <PhoneCall className="w-3.5 h-3.5 text-amber-400" /> +91 98765 43210
-              </a>
-              <span className="hidden sm:inline bg-amber-500 text-slate-950 px-2 py-0.5 rounded font-bold uppercase tracking-wider text-[10px]">
+              <span className="bg-amber-500 text-slate-950 px-2.5 py-0.5 rounded font-bold uppercase tracking-wider text-[10px]">
                 ICRC Certified
               </span>
             </div>

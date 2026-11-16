@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Crown, Facebook, Instagram, ArrowUpRight } from 'lucide-react';
+import { MapPin, Mail, Clock, Crown, Facebook, Instagram, ArrowUpRight } from 'lucide-react';
 
 export default function LocationFooter() {
   const [logoError, setLogoError] = useState(false);
@@ -49,12 +49,11 @@ export default function LocationFooter() {
               </div>
 
               <div className="flex items-start gap-4 bg-slate-900/80 p-4 rounded-2xl border border-slate-800">
-                <Phone className="w-5 h-5 text-amber-400 mt-1 shrink-0" />
+                <Mail className="w-5 h-5 text-amber-400 mt-1 shrink-0" />
                 <div>
-                  <h4 className="font-bold text-sm text-white">Contact Info</h4>
+                  <h4 className="font-bold text-sm text-white">Email Consultation</h4>
                   <p className="text-slate-300 text-xs mt-0.5">
-                    Phone: +91 98765 43210 <br />
-                    Email: info@atlascrownimmigration.in
+                    info@atlascrownimmigration.in
                   </p>
                 </div>
               </div>
